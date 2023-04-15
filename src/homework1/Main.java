@@ -12,11 +12,20 @@ public class Main {
         Book book1 = new Book("Игра в бисер", gesse, 1995);
         Book book2 = new Book("Библиотекарь",  elisarov, 2007);
 
-        System.out.println("book1.getAuthor().getLastName() = " + book1.getAuthor().getLastName());
+        System.out.println(elisarov.toString());
 
 
         book1.setPublishingYear(2005);
-        System.out.println("book1.getPublishingYear() = " + book1.getPublishingYear());
+        System.out.println(book1.toString());
+
+        Author author1 = new Author("Михаил", "Елизаров");
+        System.out.println(author1.equals(elisarov));
+
+        Book book3 = new Book("Библиотекарь",  elisarov, 2007);
+        System.out.println(book3.hashCode());
+        System.out.println(book2.hashCode());
+
+
     }
 
 }
